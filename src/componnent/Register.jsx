@@ -8,6 +8,7 @@ import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { FaLink } from "react-icons/fa6";
 import { FaEye, FaEyeSlash, FaGithub, FaFacebook } from "react-icons/fa";
 import { AuthContext } from "./Authprovider/Authprovider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -28,11 +29,15 @@ const {createUser, user} = useContext(AuthContext)
     const Accept = e.target.terms.checked;
     console.log(name, email, photo, password);
 
+  
     if (password.length < 6) {
       setErrorUser("password must be 6 caracter");
       return;
     } else if (!/[A-Z]/.test(password)) {
       setErrorUser("password must be a Uppercass");
+      return;
+    }else if(!/[a-z]/.test(password)){
+      setErrorUser("password must be a Loarcass");
       return;
     } else if (!Accept) {
       setChacked("pleace chacked in");
@@ -41,10 +46,25 @@ const {createUser, user} = useContext(AuthContext)
     setErrorUser("");
     setChacked("");
 
-    createUser(email, password,)
+    createUser(email, password, photo, name)
     .then((result)=>{
       console.log(result.user);
-      alert('singin successfully')
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Signed in successfully"
+      });
     })
     .catch((error)=>{
       console.log(error);
