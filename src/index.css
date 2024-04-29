@@ -14,3 +14,7 @@
 .listcard:hover .delete{
     display: block;
 }
+
+.active ul .active{
+    color: red;
+}

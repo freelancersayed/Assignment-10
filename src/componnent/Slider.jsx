@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { Typewriter } from 'react-simple-typewriter'
 
 function AutoPlay() {
   const settings = {
@@ -37,6 +37,12 @@ function AutoPlay() {
         <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/cox6.jpg" alt="" />
         </div>
       </Slider>
+      <div className="-mt-[390px] absolute justify-center flex items-center  w-full h-96 bg-[#00000050] ">
+        <h1 className="text-5xl text-center">slaiders</h1>
+        <div className='App'>
+      <Typewriter  />
+    </div>
+      </div>
     </div>
   );
 }

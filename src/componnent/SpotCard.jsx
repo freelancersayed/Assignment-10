@@ -13,7 +13,7 @@ const SpotCard = ({spotData}) => {
 
     return (
         <div className=''>
-         <div className=' bg-[#000000ad] mt-5 '>
+         <div className=' bg[#000000ad] shadow-2xl mt-5 '>
          <div><img className='h-52 w-full' src={photo} alt="" /></div>
            <div className='p-5'>
             <h1 className='text-4xl'>{spotName}</h1>
