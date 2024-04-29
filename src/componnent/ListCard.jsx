@@ -43,8 +43,8 @@ const ListCard = ({list}) => {
     
     
     return (
-        <div className='max-w-[1280px] mx-auto '>
-        <div className=' bg-black mt-5  gap-2   flex  shadow-2xl shadow-gray-800 listcard'>
+        <div className='max-w-[1280px] mx-auto listcard'>
+        <div className=' bgblack mt-5  gap-2   flex  shadow-lg shadow-gray-800 listcard'>
       <div className='flex  w-[635px] border-r border-orange-400  h-[410px] '><img className=' w-full' src={photo} alt="" /></div>
 
 
@@ -52,8 +52,8 @@ const ListCard = ({list}) => {
  {/* head */}
  <thead>
    <tr className='text- text-orange-400 font-bold'>
-     <th>SPOT NAME</th>
-     <th> {spotName}</th>
+     <td>SPOT NAME</td>
+     <td className='text-[14px]'> {spotName}</td>
    </tr>
  </thead>
  <tbody>
@@ -95,17 +95,17 @@ const ListCard = ({list}) => {
      <td>{userName}</td>
    </tr>
  </tbody>
-</table>
 
-<div className=' p-2  delete bg-black'>
-  <div className=''>
-  <Link to={`/update/${_id}`} className='text-2xl'><FaEdit /></Link>
-  <Link onClick={()=> handleDelete(_id)} className='text-2xl   mt-32'><MdDeleteForever className=' ' /></Link>
+
+
+</table>
+</div>
+<div className=' p-2  delete bgblack w-full absolute max-w-[1280px] '>
+  <div className='flex w-full justify-end  gap-7 -translate-y-10'>
+  <Link to={`/update/${_id}`} className='text-xl text-blue-500 '><FaEdit /></Link>
+  <Link onClick={()=> handleDelete(_id)} className='text-2xl text-red-600 '><MdDeleteForever className=' ' /></Link>
 
   </div>
-
-
-</div>
 </div>
       
 </div>

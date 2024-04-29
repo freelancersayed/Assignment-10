@@ -37,11 +37,32 @@ function AutoPlay() {
         <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/cox6.jpg" alt="" />
         </div>
       </Slider>
-      <div className="-mt-[390px] absolute justify-center flex items-center  w-full h-96 bg-[#00000050] ">
-        <h1 className="text-5xl text-center">slaiders</h1>
-        <div className='App'>
-      <Typewriter  />
-    </div>
+      <div className="flex flex-col">
+      <div className="-mt-[390px] absolute justify-center flex flex-col items-center  w-full h-96 bg-[#00000070] items-center ">
+       <div className="flex items-center gap-2">
+       <h1 className="text-5xl text-center font-bold text-white">TOUR OF ASIA ||</h1>
+     
+     <h1>
+        {' '}
+        {/* Using the Typewriter component */}
+        <span style={{ color: 'rgb(255, 136, 0)', fontWeight: 'bold', fontSize: '80px' }}>
+          <Typewriter
+            words={['Please Visit Your Website!', '& Explore more!', 'The Better Exprience!']}
+            loop={true}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={5000}
+          />
+        </span>
+      </h1>
+       </div>
+     </div>
+     <form action="">
+
+<input type="text" name="" id="" />
+</form>
       </div>
     </div>
   );

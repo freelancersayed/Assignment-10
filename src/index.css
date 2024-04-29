@@ -8,13 +8,27 @@
     font-size: large;
 }
 .delete{
-    display: ;
+    display: none;
 }
 
 .listcard:hover .delete{
     display: block;
 }
 
-.active ul .active{
-    color: red;
+ul .active{
+    color: rgb(255, 136, 0);
 }
+.side:hover .type{
+    display: none;
+}
+
+.category-card:hover .sidbar{
+    transform: translateX(250px);
+   transition: transform 0.5s;
+}
+
+.categorynav:hover .category-card .sidbar{
+    transform: translateX(250px);
+   transition: transform 0.5s;
+};
+

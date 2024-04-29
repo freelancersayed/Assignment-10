@@ -16,6 +16,7 @@ import AddSpot from "./AddSpot";
 import SpotDetails from "./SpotDetails";
 import Update from "./Update";
 import Category from "./Category";
+import Naviget from "./Naviget";
 
 
   const Router = createBrowserRouter([
@@ -70,8 +71,14 @@ import Category from "./Category";
         },
         {
           path: '/category',
-          element: <Category></Category>
-        }
+          element: <Category></Category>,
+          loader: ()=> fetch('http://localhost:5000/addspot')
+        },
+        // {
+        //   path: '/naviget/:countryName',
+        //   element: <Naviget></Naviget>,
+        //   loader: ({params})=> fetch(`http://localhost:5000/addspot/${params.}`)
+        // }
      
       ]
     },

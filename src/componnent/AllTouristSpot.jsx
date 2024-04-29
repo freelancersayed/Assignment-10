@@ -13,7 +13,7 @@ const AllTouristSpot = () => {
          {
             spotdata.map((spot) => 
             
-                <div className=' bg-[#000000ad] mt-5 shadow-2xl pb-4 '>
+                <div className=' bg[#000000ad] mt-5 shadow-2xl pb-4 '>
          <div><img className='h-52 w-full' src={spot.photo} alt="" /></div>
            <div className='p-5'>
             <h1 className='text-4xl'>{spot.spotName}</h1>
