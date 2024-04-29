@@ -14,6 +14,8 @@ import PrivetRout from "./PrivetRout/PrivetRout";
 import Profile from "./PrivetRout/Profile";
 import AddSpot from "./AddSpot";
 import SpotDetails from "./SpotDetails";
+import Update from "./Update";
+import Category from "./Category";
 
 
   const Router = createBrowserRouter([
@@ -41,9 +43,8 @@ import SpotDetails from "./SpotDetails";
           loader: ()=> fetch('http://localhost:5000/addspot')
         },
         {
-          path: '/mylist/:email',
-          element: <MyLIst></MyLIst>,
-          loader: ()=>fetch('http://localhost:5000/addspot')
+          path: '/myList/',
+          element:<PrivetRout> <MyLIst></MyLIst></PrivetRout>,
         },
         {
           path: '/feedback',
@@ -55,13 +56,22 @@ import SpotDetails from "./SpotDetails";
         },
         {
           path: '/addspot',
-          element:<AddSpot></AddSpot>
+          element:<PrivetRout><AddSpot></AddSpot></PrivetRout>
         },
         {
           path: '/details/:_id',
           element: <PrivetRout><SpotDetails></SpotDetails></PrivetRout>,
           loader: ()=> fetch('http://localhost:5000/addspot')
         },
+        {
+          path: '/update/:id',
+          element: <PrivetRout><Update></Update></PrivetRout>,
+          loader: ({params}) => fetch(`http://localhost:5000/addspot/${params.id}`)
+        },
+        {
+          path: '/category',
+          element: <Category></Category>
+        }
      
       ]
     },

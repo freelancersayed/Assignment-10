@@ -45,6 +45,9 @@ const Navebar = () => {
           <li>
             <NavLink to="/feedback">Touris Feedback</NavLink>
           </li>
+          <li>
+            <NavLink to="/category">Category</NavLink>
+          </li>
     
         
         </>
@@ -53,7 +56,7 @@ const Navebar = () => {
 
     return (
        <div>
-   <div className="navbar bg-black ">
+   <div className="navbar bg-[#000000ad] ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

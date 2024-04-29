@@ -3,10 +3,24 @@ import { AuthContext } from './Authprovider/Authprovider';
 import { data } from 'autoprefixer';
 import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const AddSpot = () => {
 
-    const {user} = useContext(AuthContext)
+    const {user, loadding} = useContext(AuthContext)
+
+
+    if(loadding){
+        return (
+            <div className='flex justify-center items-center'>
+                <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
+            </div>
+          );
+    }
+
 
 
     const handleAdd = e =>{
@@ -20,13 +34,14 @@ const AddSpot = () => {
         const seasonality = form.seasonality.value;
         const time = form.time.value;
         const perYear = form.perYear.value;
-        const email = form.email.value;
+        const userEmail = form.email.value;
         const userName = form.userName.value;
         const description = form.descreption.value;
-
-        const newData = {user, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description};
+        const email = user.email;
+        const newData = {userEmail, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description};
 
         console.log(newData);
+
 
         fetch('http://localhost:5000/addspot',{
             method: 'POST',

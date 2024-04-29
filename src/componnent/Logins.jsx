@@ -6,6 +6,9 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FaEye, FaEyeSlash, FaGithub, FaFacebook} from "react-icons/fa";
 import { AuthContext } from './Authprovider/Authprovider';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 
 
 const Logins = () => {
@@ -13,7 +16,18 @@ const Logins = () => {
     const [showPass, setShowPass]= useState(false);
     const [error, setError] = useState()
 
-    const {singIn, signInWithGoogle, handleGithubeSign} = useContext(AuthContext);
+    const {singIn, signInWithGoogle, handleGithubeSign, loadding} = useContext(AuthContext);
+
+
+    if(loadding){
+        return (
+            <div className='flex justify-center mt-80 min-h-screen'>
+            <Box sx={{ display: 'flex' }}>
+          <CircularProgress />
+        </Box>
+        </div>
+          );
+    }
 
     const handleSignIn = (e) => {
         e.preventDefault();

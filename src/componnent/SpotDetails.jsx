@@ -14,22 +14,60 @@ const SpotDetails = () => {
 
 
     return (
-        <div className='max-w-[1280px] mx-auto'>
-           <div className=' bg-black mt-5 '>
-         <div><img className=' w-full' src={photo} alt="" /></div>
-           <div className='p-5'>
-            <h1 className='text-4xl'>{spotName}</h1>
-            <p>{countryName}</p>
-            <p>{location}</p>
-            <p>{seasonality}</p>
-            <p>{time}</p>
+        <div className='max-w-[1280px] mx-auto '>
+           <div className=' bg-black mt-5  gap-2 border-2 border-orange-400 min-h-screen'>
+         <div className='flex flex-1 border-2 border-orange-400'><img className=' w-full' src={photo} alt="" /></div>
 
-           </div>
-           <div className='flex justify-end'>
-        
-           </div>
-           
-         </div>
+
+  <table className="table flex-1 ">
+    {/* head */}
+    <thead>
+      <tr className='text-4xl text-orange-400 font-bold'>
+        <th>SPOT NAME</th>
+        <th> {spotName}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <td>COUNTRY NAME</td>
+        <td> {countryName}</td>
+      </tr>
+      {/* row 2 */}
+      <tr>
+        <td>LOCATION</td>
+        <td> {location}</td>
+      </tr>
+      {/* row 3 */}
+      <tr>
+        <td>SEASONALITY</td>
+        <td>{seasonality}</td>
+      </tr>
+      <tr>
+        <td>COST</td>
+        <td>{cost}</td>
+      </tr>
+      <tr>
+        <td>DATE</td>
+        <td>{time}</td>
+      </tr>
+      <tr>
+        <td>PER YEAR</td>
+        <td>{perYear}</td>
+      </tr>
+      <tr>
+        <td>DESCRIPTION</td>
+        <td>{description}</td>
+      </tr>
+      <tr>
+        <td>CREATED BY</td>
+        <td>{userName}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+         
         </div>
     );
 };
