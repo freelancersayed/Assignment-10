@@ -16,7 +16,7 @@ import AddSpot from "./AddSpot";
 import SpotDetails from "./SpotDetails";
 import Update from "./Update";
 import Category from "./Category";
-import Naviget from "./Naviget";
+// import Naviget from "./Naviget";
 
 
   const Router = createBrowserRouter([
@@ -28,7 +28,7 @@ import Naviget from "./Naviget";
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('http://localhost:5000/addspot')
+            loader: ()=> fetch('https://tour-of-south-asia-server.vercel.app/addspot')
         },
         {
             path: '/login',
@@ -41,7 +41,7 @@ import Naviget from "./Naviget";
         {
           path: '/spot',
           element: <AllTouristSpot></AllTouristSpot>,
-          loader: ()=> fetch('http://localhost:5000/addspot')
+          loader: ()=> fetch('https://tour-of-south-asia-server.vercel.app/addspot')
         },
         {
           path: '/myList/',
@@ -50,7 +50,7 @@ import Naviget from "./Naviget";
         {
           path: '/feedback',
           element: <UserFeedback></UserFeedback>,
-          loader: ()=> fetch('http://localhost:5000/user')
+          loader: ()=> fetch('https://tour-of-south-asia-server.vercel.app/user')
         },
         {
           path: '/profile',
@@ -63,22 +63,22 @@ import Naviget from "./Naviget";
         {
           path: '/details/:_id',
           element: <PrivetRout><SpotDetails></SpotDetails></PrivetRout>,
-          loader: ()=> fetch('http://localhost:5000/addspot')
+          loader: ()=> fetch('https://tour-of-south-asia-server.vercel.app/addspot')
         },
         {
           path: '/update/:id',
           element: <PrivetRout><Update></Update></PrivetRout>,
-          loader: ({params}) => fetch(`http://localhost:5000/addspot/${params.id}`)
+          loader: ({params}) => fetch(`https://tour-of-south-asia-server.vercel.app/addspot/${params.id}`)
         },
         {
           path: '/category',
           element: <Category></Category>,
-          loader: ()=> fetch('http://localhost:5000/addspot')
+          loader: ()=> fetch('https://tour-of-south-asia-server.vercel.app/addspot')
         },
         // {
         //   path: '/naviget/:countryName',
         //   element: <Naviget></Naviget>,
-        //   loader: ({params})=> fetch(`http://localhost:5000/addspot/${params.}`)
+        //   loader: ({params})=> fetch(`https://tour-of-south-asia-server.vercel.app/addspot/${params.}`)
         // }
      
       ]

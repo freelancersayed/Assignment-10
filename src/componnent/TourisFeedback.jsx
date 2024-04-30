@@ -31,7 +31,7 @@ const UserFeedback = () => {
         console.log(newUser);
 
 
-        fetch('http://localhost:5000/user',{
+        fetch('https://tour-of-south-asia-server.vercel.app/user',{
             method: 'POST',
             headers:
                 {

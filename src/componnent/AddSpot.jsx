@@ -45,7 +45,7 @@ const AddSpot = () => {
         console.log(newData);
 
 
-        fetch('http://localhost:5000/addspot',{
+        fetch('https://tour-of-south-asia-server.vercel.app/addspot',{
             method: 'POST',
             headers:
                 {

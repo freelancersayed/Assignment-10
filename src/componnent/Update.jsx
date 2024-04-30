@@ -52,7 +52,7 @@ console.log(updateSpot);
 
 
         
-        fetch(`http://localhost:5000/addspot/${_id}`,{
+        fetch(`https://tour-of-south-asia-server.vercel.app/addspot/${_id}`,{
             method: 'PUT',
             headers:
                 {
