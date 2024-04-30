@@ -9,7 +9,7 @@ import Register from "./Register";
 import ErrorPage from "./ErrorPage";
 import AllTouristSpot from "./AllTouristSpot";
 import MyLIst from "./MyLIst";
-import TourisFeedback from "./TourisFeedback";
+import UserFeedback from "./TourisFeedback";
 import PrivetRout from "./PrivetRout/PrivetRout";
 import Profile from "./PrivetRout/Profile";
 import AddSpot from "./AddSpot";
@@ -49,7 +49,8 @@ import Naviget from "./Naviget";
         },
         {
           path: '/feedback',
-          element: <TourisFeedback></TourisFeedback>
+          element: <UserFeedback></UserFeedback>,
+          loader: ()=> fetch('http://localhost:5000/user')
         },
         {
           path: '/profile',

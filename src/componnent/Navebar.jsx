@@ -51,17 +51,15 @@ const Navebar = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
+         
           <li>
-            <NavLink to="/spot">All Tourists Spot</NavLink>
+            <NavLink className='category-nav' to="category">All Tourists Spot</NavLink>
           </li>
           <li>
             <NavLink to="/addspot">Add Tourists Spot</NavLink>
           </li>
           <li>
             <NavLink to="/mylist">My List</NavLink>
-          </li>
-          <li>
-            <NavLink className='category-nav' to="category">Category</NavLink>
           </li>
     
           <li>

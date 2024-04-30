@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
         <div className='min-h-screen items-center flex justify-center'>
+          <Helmet>
+        <title>Tour Asia | Error</title>
+        </Helmet>
         <div className="text-center -mt-40 ">
      <h1 className="text-[300px] font-bold">404</h1>
 

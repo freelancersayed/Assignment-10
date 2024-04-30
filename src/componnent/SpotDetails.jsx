@@ -16,7 +16,7 @@ const SpotDetails = () => {
     return (
         <div className='max-w-[1280px] mx-auto ' data-aos="fade-left">
            <div className=' bg-black mt-5  gap-2 border-2 border-orange-400 min-h-screen'>
-         <div className='flex flex-1 border-2 border-orange-400'><img className=' w-full' src={photo} alt="" /></div>
+         <div className='flex h-[500px] flex-1 border-2 border-orange-400'><img className=' w-full' src={photo} alt="" /></div>
 
 
   <table className="table flex-1 ">

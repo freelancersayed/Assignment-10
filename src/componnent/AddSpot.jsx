@@ -6,6 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { Typewriter } from 'react-simple-typewriter';
+import { Helmet } from 'react-helmet';
 
 const AddSpot = () => {
 
@@ -72,6 +73,9 @@ const AddSpot = () => {
 
     return (
     <div className='bgblack'>
+      <Helmet>
+        <title>Tour Asia | AddSpot</title>
+        </Helmet>
 <div className='max-w-[1280px] mx-auto content-center min-h-scree' >
 <form onSubmit={handleAdd} className='lg:w-4/5 mx-auto bg-black shadow-sm shadow-gray-700 px-6  py-10 mb-10' action="" data-aos="fade-down">
 

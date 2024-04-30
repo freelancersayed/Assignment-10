@@ -9,6 +9,7 @@ import { FaLink } from "react-icons/fa6";
 import { FaEye, FaEyeSlash, FaGithub, FaFacebook } from "react-icons/fa";
 import { AuthContext } from "./Authprovider/Authprovider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -73,6 +74,9 @@ const {createUser, user} = useContext(AuthContext)
 
   return (
     <div className="min-h-screen w-full">
+      <Helmet>
+        <title>Tour Asia | Register</title>
+        </Helmet>
       <div>
         <div className="bg-black w-80 mx-auto mt-28 shadow-gray-800 shadow">
           <div className="flex text-center login bg-[#161616a8] mb-6">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { Link, useLoaderData } from 'react-router-dom';
 
@@ -9,6 +10,9 @@ const AllTouristSpot = () => {
 
     return (
       <div >
+        <Helmet>
+        <title>Tour Asia | All Tourist</title>
+        </Helmet>
           <div className='grid grid-cols-3 gap-4 max-w-[1280px] mx-auto '>
          {
             spotdata.map((spot) => 

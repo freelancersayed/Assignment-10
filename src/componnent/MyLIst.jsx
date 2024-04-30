@@ -3,6 +3,7 @@ import { AuthContext } from "./Authprovider/Authprovider";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import ListCard from "./ListCard";
+import { Helmet } from "react-helmet";
 
 
 const MyLIst = () => {
@@ -42,6 +43,9 @@ const MyLIst = () => {
 
     return (
         <div className='min-h-screen text-center'>
+          <Helmet>
+        <title>Tour Asia | MyList</title>
+        </Helmet>
           <div className="">
           {
                list.map(lists=><ListCard key={lists._id}

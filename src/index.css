@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 600px) {
+    .animate__animated {
+      animation: none !important;
+    }
+  }
+  
+
 .login .active{
     background-color: rgb(0, 0, 0);
     color: orange;
@@ -23,7 +30,7 @@ ul .active{
 }
 
 .category-card:hover .sidbar{
-    transform: translateX(250px);
+    transform: translateX(240px);
    transition: transform 0.5s;
 }
 
@@ -32,3 +39,6 @@ ul .active{
    transition: transform 0.5s;
 };
 
+.scrol:hover .scorlcard .scrols{
+    display: none;
+}
