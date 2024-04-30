@@ -48,7 +48,7 @@ const Home = () => {
         <div className=''>
         <AutoPlay></AutoPlay>
         <div className="">
-        <h1 className="text-6xl text-center my-5 mt-10">Like Your Place</h1>
+        <h1 className="text-6xl text-center my-5 mt-10 font-bold" data-aos="fade-left">Like Your Place</h1>
         <hr className="w-2/3 mx-auto border-gray-600" />
         <div className="max-w-[1280px] mx-auto">
 
@@ -68,7 +68,7 @@ const Home = () => {
                 
             }
         </div>
-        <div className="max-w-[1280px] mx-auto grid grid-cols-3 gap-4">
+        <div className="max-w-[1280px] mx-auto grid lg:grid-cols-3 px-2 gap-4">
         {
                 con.map(spot=><SpotCard key={spot._id} spotData={spot}></SpotCard>)
             }

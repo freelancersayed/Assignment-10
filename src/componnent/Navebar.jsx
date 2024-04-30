@@ -85,7 +85,7 @@ const Navebar = () => {
         {NavLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost text-2xl font-bold">TOUR OF SOUTH ASIA </a>
+    <a className="btn btn-ghost text-2xl font-bold">TOUR OF <span className='text-orange-500'>  ASIA</span> </a>
   </div>
   <div className="navbar-center  hidden lg:flex">
     <ul className="gap-8 menu-horizontal px-1">
@@ -100,7 +100,7 @@ const Navebar = () => {
        <>
       
   {/* theme ====================================================================== */}
-  <div className='mr-10'>
+  <div className='lg:mr-10 mr-2'>
   <label className="swap swap-rotate">
   
   {/* this hidden checkbox controls the state */}

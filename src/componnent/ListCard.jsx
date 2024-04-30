@@ -5,6 +5,7 @@ import { FaEdit } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { update } from 'firebase/database';
 import Swal from 'sweetalert2';
+import { Fade } from 'react-awesome-reveal';
 
 const ListCard = ({list}) => {
     const {_id, userEmail, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description} = list;
@@ -43,7 +44,7 @@ const ListCard = ({list}) => {
     
     
     return (
-        <div className='max-w-[1280px] mx-auto listcard'>
+        <div className='max-w-[1280px] mx-auto listcard' data-aos="fade-left">
         <div className=' bgblack mt-5  gap-2   flex  shadow-lg shadow-gray-800 listcard'>
       <div className='flex  w-[635px] border-r border-orange-400  h-[410px] '><img className=' w-full' src={photo} alt="" /></div>
 
@@ -53,7 +54,7 @@ const ListCard = ({list}) => {
  <thead>
    <tr className='text- text-orange-400 font-bold'>
      <td>SPOT NAME</td>
-     <td className='text-[14px]'> {spotName}</td>
+    <Fade> <td className='text-[14px]'> {spotName}</td></Fade>
    </tr>
  </thead>
  <tbody>

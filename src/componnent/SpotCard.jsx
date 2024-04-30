@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 
 const SpotCard = ({spotData}) => {
@@ -13,10 +14,10 @@ const SpotCard = ({spotData}) => {
 
     return (
         <div className=''>
-         <div className=' bg[#000000ad] shadow-2xl mt-5 '>
+         <div className=' bg[#000000ad] shadow-2xl mt-5 ' data-aos="flip-left">
          <div><img className='h-52 w-full' src={photo} alt="" /></div>
            <div className='p-5'>
-            <h1 className='text-4xl'>{spotName}</h1>
+            <Fade><h1 className='text-4xl'>{spotName}</h1></Fade>
             <p>{countryName}</p>
             <p>{location}</p>
             <p>{seasonality}</p>

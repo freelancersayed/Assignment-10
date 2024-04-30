@@ -19,33 +19,33 @@ function AutoPlay() {
     <div className="slider-container ">
       <Slider {...settings} className="">
         <div className="">
-          <img className="h-96 w-full  border-x-2 border-orange-400" src="/slider/1.jpg" alt="" />
+          <img className="lg:h-[450px] h-[300px] w-full  border-x-2 border-orange-400" src="/slider/1.jpg" alt="" />
         </div>
         <div className="">
-        <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/2.jpg" alt="" />
+        <img className="lg:h-[450px] h-[300px] w-full border-r-2 border-orange-400" src="/slider/2.jpg" alt="" />
         </div>
         <div>
-        <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/sy3.jpg" alt="" />
+        <img className="lg:h-[450px] h-[300px] w-full border-r-2 border-orange-400" src="/slider/sy3.jpg" alt="" />
         </div>
         <div>
-        <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/sat4.jpg" alt="" />
+        <img className="lg:h-[450px] h-[300px] w-full border-r-2 border-orange-400" src="/slider/sat4.jpg" alt="" />
         </div>
         <div>
-        <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/sun5.jpg" alt="" />
+        <img className="lg:h-[450px] h-[300px] w-full border-r-2 border-orange-400" src="/slider/sun5.jpg" alt="" />
         </div>
         <div>
-        <img className="h-96 w-full border-r-2 border-orange-400" src="/slider/cox6.jpg" alt="" />
+        <img className="lg:h-[450px] h-[300px] w-full border-r-2 border-orange-400" src="/slider/cox6.jpg" alt="" />
         </div>
       </Slider>
       <div className="flex flex-col">
-      <div className="-mt-[390px] absolute justify-center flex flex-col items-center  w-full h-96 bg-[#00000070] items-center ">
-       <div className="flex items-center gap-2">
-       <h1 className="text-5xl text-center font-bold text-white">TOUR OF ASIA ||</h1>
+      <div className="lg:-mt-[456px] -mt-[306px]  absolute justify-center flex flex-col items-center  w-full h-[300px] lg:h-[450px] bg-[#00000070] items-center ">
+       <div className=" lg:flex items-center gap-2">
+       <h1 className="lg:text-5xl text-3xl text-center font-bold text-white">TOUR OF ASIA ||</h1>
      
-     <h1>
+     <h1 className="text-3xl lg:text-7xl">
         {' '}
         {/* Using the Typewriter component */}
-        <span style={{ color: 'rgb(255, 136, 0)', fontWeight: 'bold', fontSize: '80px' }}>
+        <span style={{ color: 'rgb(255, 136, 0)', fontWeight: 'bold',  }}>
           <Typewriter
             words={['Please Visit Your Website!', '& Explore more!', 'The Better Exprience!']}
             loop={true}
@@ -61,7 +61,6 @@ function AutoPlay() {
      </div>
      <form action="">
 
-<input type="text" name="" id="" />
 </form>
       </div>
     </div>

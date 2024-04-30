@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import { Typewriter } from 'react-simple-typewriter';
 
 
 const Update = () => {
@@ -80,8 +81,22 @@ console.log(updateSpot);
 <div className='max-w-[1280px] mx-auto content-center min-h-scree' >
 <form onSubmit={handleUpdate} className='lg:w-4/5 mx-auto bg-black shadow-sm shadow-gray-700 px-6  py-10 mb-10' action="">
 
-<h1 className='text-5xl text-center text-white font-bold mb-4'>Update Your Tourists Spot</h1>
-<h1 className='text-2xl'>{email}</h1>
+{/* <h1 className='text-5xl text-center text-white font-bold mb-4'>Update Your Tourists Spot</h1> */}
+<h1 className='text-center mb-5'>
+        {' '}
+        {/* Using the Typewriter component */}
+        <span style={{ color: 'rgb(255, 136, 0)', fontWeight: 'bold', }} className='text-2xl lg:text-6xl'>
+          <Typewriter
+            words={['Update Your Tourists Spot!', 'Update Your Tourists Spot!', 'Update Your Tourists Spot!']}
+            loop={true}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
+      </h1>
 <hr className=' border-gray-500 border-2' />
 
 <div className='justify-center grid grid-cols-2 gap-4 mt-32'>
