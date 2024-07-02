@@ -52,4 +52,4 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/programming-hero-web-course1/b9a12-client-side-freelancersayed.git
+   git clone https://github.com/freelancersayed/Assignment-10.git
